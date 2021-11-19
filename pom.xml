@@ -15,5 +15,8 @@
 		<module>toymall-order</module>
 		<module>toymall-product</module>
 		<module>toymall-ware</module>
+		<module>renren-fast</module>
+		<module>renren-generator</module>
+		<module>toymall-common</module>
 	</modules>
 </project>
