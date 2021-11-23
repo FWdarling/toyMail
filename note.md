@@ -77,7 +77,7 @@ alias nacos-shutdown='sh  ${NACOS_HOME}/bin/shutdown.sh'
    @FeignClient(name = "${service-provider}")
    ```
 
-3. 将要远程调用的 http 接口对应的 controller 方法 的完整签名粘贴到上面创建的接口中 作为方法声明 （注意 url 要修改为外部访问的url 即完整的服务+url）
+3. 将要远程调用的 http 接口对应的 controller 方法 的完整签名粘贴到上面创建的接口中 作为方法声明 （注意 url 要修改为外部访问的url）
 
 4. 在调用方的 `application`上标注为启用远程调用，并标注 feign client 的包路径
 
@@ -91,12 +91,12 @@ alias nacos-shutdown='sh  ${NACOS_HOME}/bin/shutdown.sh'
 
 1. 按照[文档](https://github.com/alibaba/spring-cloud-alibaba/blob/master/spring-cloud-alibaba-examples/nacos-example/nacos-config-example/readme-zh.md)引入依赖 创建配置文件`bootstrap.properties`
 
-2. 按照启动日志中的配置名字(一般为${application-name.properties)作为 `data id`创建配置
+2. 按照启动日志中的配置名字(一般为${application-name)作为 `data id`创建配置
 
 3. 如果配置没有生效 可以尝试添加依赖（由于springboot版本导致）
 
    ```xml
-   <-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-bootstrap -->
+   <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-bootstrap -->
    <dependency>
        <groupId>org.springframework.cloud</groupId>
        <artifactId>spring-cloud-starter-bootstrap</artifactId>
