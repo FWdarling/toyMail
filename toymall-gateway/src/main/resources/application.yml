@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      routes:
+        - id: baidu
+          uri: http://baidu.com
+          predicates:
+            - Query=url,baidu
+        - id: qq
+          uri: http://qq.com
+          predicates:
+            - Query=url,qq
+  application:
+    name: toymall-gateway
+server:
+  port: 8888

@@ -18,5 +18,6 @@
 		<module>renren-fast</module>
 		<module>renren-generator</module>
 		<module>toymall-common</module>
+		<module>toymall-gateway</module>
 	</modules>
 </project>
