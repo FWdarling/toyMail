@@ -2,8 +2,10 @@ package com.fourwood.toymall.product.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.fourwood.common.utils.PageUtils;
+import com.fourwood.toymall.product.dto.CategoryListTreeDto;
 import com.fourwood.toymall.product.entity.CategoryEntity;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,5 +18,7 @@ import java.util.Map;
 public interface CategoryService extends IService<CategoryEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    List<CategoryListTreeDto> listWithTree();
 }
 
