@@ -166,6 +166,8 @@ alias nacos-shutdown='sh  ${NACOS_HOME}/bin/shutdown.sh'
 
 对于给定的请求 如果`predicates`匹配成功， 则会进入`filters`而后转发到 `uri`
 
+其中路由的匹配是从上到下 找到第一个匹配的为准
+
 ```yaml
 routes:
     - 	id: admin_route
