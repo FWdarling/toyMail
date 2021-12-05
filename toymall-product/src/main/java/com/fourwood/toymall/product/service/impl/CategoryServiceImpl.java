@@ -58,6 +58,13 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
         return dtos;
     }
 
+    @Override
+    public void removeMenuByIds(List<Long> catIds) {
+
+        //TODO 检查删除的节点是否有子结点
+        baseMapper.deleteBatchIds(catIds);
+    }
+
     private CategoryListTreeDto buildDto(CategoryEntity entity) {
         CategoryListTreeDto dto = new CategoryListTreeDto();
         BeanUtils.copyProperties(entity, dto);
